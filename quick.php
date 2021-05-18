@@ -115,31 +115,21 @@ function quicksort(array &$list, int $left, int $right) {
 }
 
 $timeStart = microtime(true);
-
-sort($normalDistribution);
-// quicksort($normalDistribution, 0, count($normalDistribution) - 1);
-
-
+quicksort($normalDistribution, 0, count($normalDistribution) - 1);
 $timeEnd = microtime(true);
 
 echo ($timeEnd - $timeStart) * 1000000;
 echo "\r\n";
 
 $timeStart = microtime(true);
-
-sort($shiftedDistribution);
-// quicksort($shiftedDistribution, 0, count($shiftedDistribution) - 1);
-
+quicksort($shiftedDistribution, 0, count($shiftedDistribution) - 1);
 $timeEnd = microtime(true);
 
 echo ($timeEnd - $timeStart) * 1000000;
 echo "\r\n";
 
 $timeStart = microtime(true);
-
-sort($betaDistribution);
-// quicksort($betaDistribution, 0, count($betaDistribution) - 1);
-
+quicksort($betaDistribution, 0, count($betaDistribution) - 1);
 $timeEnd = microtime(true);
 
 echo ($timeEnd - $timeStart) * 1000000;
